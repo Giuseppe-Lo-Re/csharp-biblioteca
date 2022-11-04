@@ -19,6 +19,8 @@
 //Deve essere possibile effettuare la ricerca dei prestiti dato nome e cognome di un cliente.
 //Mi raccomando, prima di buttarvi sul codice fate qualche schema per capire le entità principali e le loro relazioni / eredità.
 
+//Inizializzo una nuova Biblioteca
+Biblioteca Biblioteca = new Biblioteca();
 
 public class Biblioteca
 {
@@ -75,6 +77,7 @@ public class Biblioteca
             Titolo = titolo;
             Anno = anno;
             Settore = settore;
+            Stato = stato;
             Scaffale = scaffale;
             Autore = autore;
         }
@@ -86,7 +89,7 @@ public class Biblioteca
         public int Pagine { get; set; }
 
         //Construttore
-        public Libro(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore, int pagine) : base(id, titolo, anno, settore, stato, scaffale, autore, pagine)
+        public Libro(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore, int pagine) : base(id, titolo, anno, settore, stato, scaffale, autore)
         {
             Pagine = pagine;
         }
@@ -99,7 +102,7 @@ public class Biblioteca
         public int Durata { get; set; }
 
         //Construttore
-        public Dvd(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore, int durata) : base(id, titolo, anno, settore, stato, scaffale, autore, durata)
+        public Dvd(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore, int durata) : base(id, titolo, anno, settore, stato, scaffale, autore)
         {
             Durata = durata;
         }
