@@ -39,4 +39,22 @@ public class Biblioteca
         }
         return null;
     }
+
+    public void RegistrazioneUtente()
+    {
+        Console.WriteLine("Registrazione in corso...");
+        Console.WriteLine("Cognome:");
+        string cognome = Console.ReadLine();
+        Console.WriteLine("Nome:");
+        string nome = Console.ReadLine();
+        Console.WriteLine("Email:");
+        string email = Console.ReadLine();
+        Console.WriteLine("Password:");
+        string password = Console.ReadLine();
+        Console.WriteLine("Telefono:");
+        string telefono = Console.ReadLine();
+
+        Utente utenti = new Utente(cognome, nome, email, password, telefono);
+        utentiList.Add(utenti);
+    }
 }
