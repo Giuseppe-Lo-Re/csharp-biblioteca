@@ -1,19 +1,15 @@
-﻿using static Biblioteca;
-
-public class Prestito
+﻿public class Prestito
 {
-    //Properties
     public Utente Utente { get; }
     public Documento Documento { get; }
     public string InizioPrestito { get; set; }
     public string FinePrestito { get; set; }
 
-    //Construttore
-    public Prestito(Utente utente, Documento documento, string inizioPrestito, string FinePrestito)
+    public Prestito(Utente utente, Documento documento, string inizioPrestito, string finePrestito)
     {
         Utente = utente;
         Documento = documento;
         InizioPrestito = inizioPrestito;
-        FinePrestito = FinePrestito;
+        FinePrestito = finePrestito;
     }
 }

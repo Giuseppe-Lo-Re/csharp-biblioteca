@@ -1,26 +1,21 @@
-﻿public class Biblioteca
+﻿public class Documento
 {
-    public class Documento
-    {
-        //Properties
-        public string Id { get; }
-        public string Titolo { get; }
-        public int Anno { get; }
-        public string Settore { get; }
-        public bool Stato { get; }   
-        public string Scaffale { get; }
-        public string Autore { get; }
+    public string Id { get; }
+    public string Titolo { get; set; }
+    public string Settore { get; set; }
+    public int Anno { get; set; }
+    public bool Disponibile { get; set; }
+    public string Scaffale { get; set; }
+    public Persona Autore { get; set; }
 
-        //Construttore
-        public Documento(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore)
-        {
-            Id = id;
-            Titolo = titolo;
-            Anno = anno;
-            Settore = settore;
-            Stato = stato;
-            Scaffale = scaffale;
-            Autore = autore;
-        }
+    public Documento(string id, string titolo, string settore, int anno, string scafalle, Persona autore)
+    {
+        Id = id;
+        Titolo = titolo;
+        Settore = settore;
+        Anno = anno;
+        Scaffale = scafalle;
+        Autore = autore;
+        Disponibile = true;
     }
 }

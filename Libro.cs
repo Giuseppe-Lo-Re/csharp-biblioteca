@@ -1,15 +1,9 @@
-﻿using static Biblioteca;
-
-public class Libro : Documento
+﻿public class Libro : Documento
 {
-    //Properties
     public int Pagine { get; set; }
 
-    //Construttore
-    public Libro(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore, int pagine) : base(id, titolo, anno, settore, stato, scaffale, autore)
+    public Libro(string id, string titolo, string settore, int anno, string scaffale, Persona autore, int pagine) : base(id, titolo, settore, anno, scaffale, autore)
     {
         Pagine = pagine;
     }
-
-
 }
